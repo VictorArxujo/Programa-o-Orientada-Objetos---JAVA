@@ -7,12 +7,11 @@ public class Funcionario extends DadosProfissionais {
 	private Endereco ender;
 
 	
-	public Funcionario(){
-		System.out.println("\n Met. Const. Default");
+	public Funcionario(){ //met const
+
 		id = 0;
 		nome = "";
 		cpf = 0;
-		nome = "";
 		ender = new Endereco();
 	}
 

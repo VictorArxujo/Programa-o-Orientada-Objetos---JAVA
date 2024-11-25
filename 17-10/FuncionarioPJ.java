@@ -3,7 +3,13 @@ public class FuncionarioPJ extends Funcionario {
     private double valorContrato;
     private int tempoContrato;
 
-    // Getters e setters
+    public FuncionarioPJ(){ //met const
+        cnpj= "";
+        valorContrato = 0;
+        tempoContrato = 0;
+    }
+
+
     public String getCnpj() {
         return cnpj;
     }

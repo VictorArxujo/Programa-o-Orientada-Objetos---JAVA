@@ -5,6 +5,13 @@ public class Estagiario extends Funcionario {
     private int chs;
     private double bolsaAuxilio;
 
+    public Estagiario(){//met const
+        instituicaoEnsino = "";
+        curso = "";
+        chs = 0;
+        bolsaAuxilio = 0;
+    }
+
 
     public String getInstituicaoEnsino() {
         return instituicaoEnsino;

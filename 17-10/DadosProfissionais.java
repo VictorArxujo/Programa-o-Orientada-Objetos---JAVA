@@ -5,6 +5,18 @@ public class DadosProfissionais {
     private String dataAdmissao;
     private boolean status;
 
+
+    
+	public DadosProfissionais(){ //met const
+		
+	    cargo = "";
+		salario = 0;
+		departamento = "";
+		dataAdmissao = "";
+        status = false;
+    }
+
+
     public String getCargo() {
         return cargo;
     }

@@ -5,6 +5,18 @@ public class Endereco {
     private String cidade;
     private String estado;
     private String cep;
+   
+    public Endereco () { //met const
+        rua = "";
+        numero = 0;
+        bairro = "";
+        cidade = "";
+        estado = "";
+        cep = "";
+
+    }
+   
+   
     public String getRua() {
         return rua;
     }
