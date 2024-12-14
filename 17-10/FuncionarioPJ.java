@@ -1,6 +1,6 @@
 //Victor Dos Santos Araujo 2475553
 
-public class FuncionarioPJ extends Funcionario {
+public class FuncionarioPJ extends Funcionario implements Pagamento {
     private String cnpj;
     private double valorContrato;
     private int tempoContrato;
@@ -35,4 +35,11 @@ public class FuncionarioPJ extends Funcionario {
     public void setTempoContrato(int tempoContrato) {
         this.tempoContrato = tempoContrato;
     }
+    
+    @Override
+    public void calcularPagamento() {
+    System.out.println("Pagamento: " + (valorContrato / tempoContrato));
+
+    }
+
 }

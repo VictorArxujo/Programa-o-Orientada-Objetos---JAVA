@@ -1,6 +1,6 @@
 //Victor Dos Santos Araujo 2475553
 
-public class Estagiario extends Funcionario {
+public class Estagiario extends Funcionario implements Pagamento {
     
     private String instituicaoEnsino;
     private String curso;
@@ -44,5 +44,10 @@ public class Estagiario extends Funcionario {
 
     public void setBolsaAuxilio(double bolsaAuxilio) {
         this.bolsaAuxilio = bolsaAuxilio;
+    }
+    
+    @Override
+    public void calcularPagamento() {
+        System.out.println("Salário do Estagiário: " + bolsaAuxilio);
     }
 }

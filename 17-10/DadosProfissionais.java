@@ -28,13 +28,17 @@ public class DadosProfissionais {
         return salario;
     }
 
-    public void setSalario(double salario) {
-        if(salario >= 0){
-            this.salario = salario;	
-            }else{
-                System.out.println ("Cpf dever ser Positivo >");
-            }
+    // Alterando o método setSalario com try/catch
+
+    public void setSalario(double salario) throws SalarioInvalidoException { // Declara que o método pode lançar SalarioInvalidoException
+        if (salario < 0) {
+            throw new SalarioInvalidoException("Salário não pode ser negativo!"); // Lança a exceção
+        }
+        this.salario = salario;
     }
+    
+    
+
 
     public String getDepartamento() {
         return departamento;
@@ -59,4 +63,5 @@ public class DadosProfissionais {
     public void setStatus(boolean status) {
         this.status = status;
     }
+    
 }
