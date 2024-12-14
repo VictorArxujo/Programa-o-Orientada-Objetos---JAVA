@@ -1,3 +1,5 @@
+//Victor Dos Santos Araujo 2475553
+
 public class Endereco {
     private String rua;
     private int numero;
@@ -13,9 +15,7 @@ public class Endereco {
         cidade = "";
         estado = "";
         cep = "";
-
     }
-   
    
     public String getRua() {
         return rua;

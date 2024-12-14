@@ -1,3 +1,5 @@
+//Victor Dos Santos Araujo 2475553
+
 public class Estagiario extends Funcionario {
     
     private String instituicaoEnsino;
@@ -11,7 +13,6 @@ public class Estagiario extends Funcionario {
         chs = 0;
         bolsaAuxilio = 0;
     }
-
 
     public String getInstituicaoEnsino() {
         return instituicaoEnsino;

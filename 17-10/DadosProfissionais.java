@@ -1,14 +1,13 @@
+//Victor Dos Santos Araujo 2475553
+
 public class DadosProfissionais {
     private String cargo;
     private double salario;
     private String departamento;
     private String dataAdmissao;
     private boolean status;
-
-
     
 	public DadosProfissionais(){ //met const
-		
 	    cargo = "";
 		salario = 0;
 		departamento = "";
@@ -30,7 +29,11 @@ public class DadosProfissionais {
     }
 
     public void setSalario(double salario) {
-        this.salario = salario;
+        if(salario >= 0){
+            this.salario = salario;	
+            }else{
+                System.out.println ("Cpf dever ser Positivo >");
+            }
     }
 
     public String getDepartamento() {

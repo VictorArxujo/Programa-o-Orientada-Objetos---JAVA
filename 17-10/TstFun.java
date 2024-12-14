@@ -1,31 +1,61 @@
-public class TstFun{
+// Victor dos Santos Araujo - 2475553
 
-	public static void main(String arg[]){ //classloader
-		//Leitura l = new Leitura();
+import java.util.Scanner;
 
-		// instanciações 
+public class TstFun {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);  
+        boolean condition = true;  
 
-		Funcionario e1 = new Estagiario(); 
-	
-				e1.setNome("João");
-				e1.setCpf(10); //estagio
-				e1.setSalario(1200);
-    
-	/*			f1.setNome("Victor");  //funcionario
-				f1.setCpf(115); //funcionario
-				f1.setSalario(10000);
- 	*/
+        while (condition) {
+            System.out.println("--- MENU ---");
+            System.out.println("Digite:");
+            System.out.println("1 - Para Funcionário");
+            System.out.println("2 - Para Estagiário");
+            System.out.println("3 - Para Funcionário PJ");
+            System.out.println("0 - Para Sair");
+            System.out.print("Escolha uma opção: ");
+            
+            int escolha = Integer.parseInt(scanner.nextLine());  
+            
+            Funcionario funcionario = null;  
+            
+            switch (escolha) {
+                case 1:
+                    funcionario = new Funcionario();  
+                    break;
+                case 2:
+                    funcionario = new Estagiario();  
+                    break;
+                case 3:
+                    funcionario = new FuncionarioPJ();  
+                    break;
+                case 0:
+                    condition = false;  
+                    System.out.println("Saindo do programa...");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");  
+            }
 
-		System.out.println("\nNome do Estagiário...: "+ e1.getNome()); 
-		System.out.println("\nCPF Estagiário.: "+  e1.getCpf()); 
-		System.out.println("\nSalário do Estagiário..: "+ e1.getSalario()); 
-	
-		/*		
-		System.out.println("\nNome do Funcionário.: "+   f1.getNome()); 
-		System.out.println("\nCpf do Funcionário.: "+   f1.getCpf()); 
-		System.out.println("Salário do Funcionário.: "+   f1.getSalario()); 
-		*/
+            if (funcionario != null) {
+             
+                System.out.print("Digite o nome: ");
+                funcionario.setNome(scanner.nextLine());
 
-	}
+                System.out.print("Digite o CPF: ");
+                funcionario.setCpf(Integer.parseInt(scanner.nextLine()));
 
+                System.out.print("Digite o salário: ");
+                funcionario.setSalario(Double.parseDouble(scanner.nextLine()));
+
+                System.out.println("\n--- Dados Cadastrados ---");
+                System.out.println("Nome: " + funcionario.getNome());
+                System.out.println("CPF: " + funcionario.getCpf());
+                System.out.println("Salário: " + funcionario.getSalario());
+            }
+        }
+        
+        scanner.close();  
+    }
 }

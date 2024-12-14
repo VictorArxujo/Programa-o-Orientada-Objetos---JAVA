@@ -1,3 +1,5 @@
+//Victor Dos Santos Araujo 2475553
+
 public class Funcionario extends DadosProfissionais {
  
 	private int id;
@@ -6,9 +8,7 @@ public class Funcionario extends DadosProfissionais {
     private int cpf;
 	private Endereco ender;
 
-	
 	public Funcionario(){ //met const
-
 		id = 0;
 		nome = "";
 		cpf = 0;
@@ -37,7 +37,7 @@ public class Funcionario extends DadosProfissionais {
 		if(cpf >= 0){
 		this.cpf = cpf;	
 		}else{
-			System.out.println("Cpf dever ser Positivo >");
+			System.out.println ("Cpf dever ser Positivo >");
 		}
 	}
 	public int getCpf(){
